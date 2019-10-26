@@ -29,6 +29,8 @@ On BotBehaviour
      enemyTeam = permet d'acceder à la team ennemie
      botTeam.Places = permet de recuperer les positions associé à la team
      enemyTeam.Places = permet de recuperer les positions associés à la team adverse
+     botTeam.TeamSide = permet de recuperer la cote de l'équipe (Red or Blue)
+     enemyTeam.TeamSide = permet de recuperer la cote de l'équipe (Red or Blue)
      botTeam.flag = permet de recuperer le drapeau de la team
      enemyTeam.flag = permet de recuperer le drapeau de la team ennemie
      .....flag.Carrier = permet de récuperer l'id de celui qui porte le flag
