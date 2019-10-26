@@ -23,6 +23,7 @@ On BotBehaviour
      bot.flagVisible = permet de recuperer si le bot voit ou non son drapeau
      bot.enemyFlagVisible = permet de recuperer si le bot voit ou non le drapeau ennemie
      bot.Health = permet de recuperer les points de vie du bot
+     bot.hasFlag = permet de repuerer si le bot porte un drapeau
     
      botTeam = permet d'acceder à la team du bot
      enemyTeam = permet d'acceder à la team ennemie
@@ -62,6 +63,9 @@ On TeamBehaviour
     
     Fonction appelée sur chaque Team quand un dreapeau est volé (volé à la base ou ramassé au sol)
     public override void OnFlagStolen(Team teamStolen){ }
+    
+    Fonction appelée sur chaque Team quand une équipe marque un point
+    public override void OnFlagDropped(Team teamFlagDropped){ }
     
     Fonction appelée sur chaque Team quand un drapeau est sauvé
     public override void OnFlagSaved(Team teamStolen){ }
