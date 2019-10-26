@@ -30,16 +30,19 @@ public class RoundMaster : MonoBehaviour
 
     public int GetScore(int team)
     {
+        if (this.data.scores == null)
+            return -1;
         return this.data.scores[team];
     }
 
     public int GetMatchScore(int teamId)
     {
-        return this.master.GetScrore(teamId);
+        return this.master.GetScore(teamId);
     }
     
     public void Init(string teamAName, string teamBName, MatchMaster master)
     {
+        this.data = new RoundData();
         this.master = master;
         this.teamsName = new[] {teamAName, teamBName};
         this.data.winner = -1;

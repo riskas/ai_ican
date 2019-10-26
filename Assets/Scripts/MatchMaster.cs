@@ -34,8 +34,10 @@ public class MatchMaster : MonoBehaviour
     public int Turn => this.data.rounds;
     private bool finished;
 
-    public int GetScrore(int team)
+    public int GetScore(int team)
     {
+        if (this.data.Scores == null)
+            return -1;
         return this.data.Scores[team];
     }
     
@@ -76,6 +78,7 @@ public class MatchMaster : MonoBehaviour
     }
     
     public void InitRound(){
+        Debug.Log("Current round is : " +this.data.rounds);
         this.data.rounds ++;
         this.roundMaster.Init(this.data.teamAName,this.data.teamBName, this);
     }

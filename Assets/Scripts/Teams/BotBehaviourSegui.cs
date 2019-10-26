@@ -27,7 +27,7 @@ public class BotBehaviourSegui : BotBehaviour
     
     void Update()
     {
-        
+        Debug.Log("The round turn on my bot is : " +this.master.RoundTurn);
         this.bot.RotateTowardsPoint(this.botTeam.flag.transform.position);
         if(!bot.agent.pathPending)
         {
@@ -38,9 +38,6 @@ public class BotBehaviourSegui : BotBehaviour
   
     // fonction appelée pour changer d'état
     public void SwitchState(BotState newState) {
-        
-       
-        
         this.OnExitState();
         this.state = newState;
         this.OnEnterState();
