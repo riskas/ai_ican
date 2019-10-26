@@ -1,6 +1,9 @@
 ai_framework
 
- bot = permet de récuperer le component Bot
+
+On BotBehaviour
+
+     bot = permet de récuperer le component Bot
 
      master = permet d'acceder au GameMaster de la partie pour utiliser des fonctions outils
      master.TimeLeft = permet de récuperer le temps restant pour le round
@@ -19,6 +22,8 @@ ai_framework
      bot.visibleRockets = permet de récuperer les liste des rockets visibles par le bot
      bot.flagVisible = permet de recuperer si le bot voit ou non son drapeau
      bot.enemyFlagVisible = permet de recuperer si le bot voit ou non le drapeau ennemie
+     bot.Health = permet de recuperer les points de vie du bot
+     bot.hasFlag = permet de repuerer si le bot porte un drapeau
     
      botTeam = permet d'acceder à la team du bot
      enemyTeam = permet d'acceder à la team ennemie
@@ -44,10 +49,38 @@ ai_framework
      
      methode à contacter avec en paramètre le nouvelle etat du bot pour lui permettre de changer d'etat'
      SwitchState(BotState newState)
-     
-    
+         
      Permet de dire au bot de se rendre sur une position appartenant à l'équipe ( ici la ou se trouve le drapeau )
      bot.agent.SetDestination(botTeam.Places.GetPlacePosition(KeyPlaces.FLAG));
     
      Permet de tirer une roquete dans une direction ( vector3 )
      bot.ShootInDirection(direction); 
+             
+    Fonction appelée sur le bot quand il prend des dommages
+    public override void OnTakeDamage() {}
+    
+    Fonction appelée sur le bot quand il  respawn prend des dommages
+    public override void OnRespawn() {}
+    
+    Fonction appelée sur le bot quand il meurt
+    public override void OnDeath() {}
+             
+             
+On TeamBehaviour
+     
+    Fonction appelée sur chaque Team quand le match commence
+    public override void OnMatchStart() {}
+    
+    Fonction appelée sur chaque Team quand un dreapeau est volé (volé à la base ou ramassé au sol)
+    public override void OnFlagStolen(Team teamStolen){ }
+    
+    Fonction appelée sur chaque Team quand une équipe marque un point
+    public override void OnFlagDropped(Team teamFlagDropped){ }
+    
+    Fonction appelée sur chaque Team quand un drapeau est sauvé
+    public override void OnFlagSaved(Team teamStolen){ }
+    
+    Fonction appelée sur chaque Team quand une équipe marque un point
+    public override void OnTeamScored(Team teamStolen){ }
+     
+     
