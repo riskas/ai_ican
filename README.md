@@ -56,6 +56,16 @@ On BotBehaviour
      Permet de tirer une roquete dans une direction ( vector3 )
      bot.ShootInDirection(direction); 
              
+    Fonction appelée sur le bot quand il prend des dommages
+    public override void OnTakeDamage() {}
+    
+    Fonction appelée sur le bot quand il  respawn prend des dommages
+    public override void OnRespawn() {}
+    
+    Fonction appelée sur le bot quand il meurt
+    public override void OnDeath() {}
+             
+             
 On TeamBehaviour
      
     Fonction appelée sur chaque Team quand le match commence
