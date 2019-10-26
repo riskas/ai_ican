@@ -8,6 +8,7 @@ On BotBehaviour
      master = permet d'acceder au GameMaster de la partie pour utiliser des fonctions outils
      master.TimeLeft = permet de récuperer le temps restant pour le round
      master.TimeSinceStart = permet récuperer le temps restant ecoulé depuis le debut du round
+     master.RoundTurn = permet de récuperer le numero du round en cours
      
      teamBehaviour = permet de contacter votre script de comportement de votre équipe
      
@@ -29,6 +30,10 @@ On BotBehaviour
      enemyTeam = permet d'acceder à la team ennemie
      botTeam.Places = permet de recuperer les positions associé à la team
      enemyTeam.Places = permet de recuperer les positions associés à la team adverse
+     botTeam.RoundScore = permet de recuperer le score du round
+     enemyTeam.RoundScore = permet de recuperer le score du round
+     botTeam.MatchScore = permet de recuperer le score du match
+     enemyTeam.MatchScore = permet de recuperer le score du match
      botTeam.TeamSide = permet de recuperer la cote de l'équipe (Red or Blue)
      enemyTeam.TeamSide = permet de recuperer la cote de l'équipe (Red or Blue)
      botTeam.flag = permet de recuperer le drapeau de la team
