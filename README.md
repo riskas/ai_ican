@@ -9,6 +9,9 @@ On BotBehaviour
      master.TimeLeft = permet de récuperer le temps restant pour le round
      master.TimeSinceStart = permet récuperer le temps restant ecoulé depuis le debut du round
      master.RoundTurn = permet de récuperer le numero du round en cours
+     master.RocketRadius = permet de récuperer la radius des rockets
+     master.RocketDamage = permet de récuperer les degats des rockets
+     master.FlagSpawnTime = permet de récuperer le temps au moment ou le flag spwn ou respawn
      
      teamBehaviour = permet de contacter votre script de comportement de votre équipe
      
@@ -56,6 +59,9 @@ On BotBehaviour
      
      methode à contacter avec en paramètre le nouvelle etat du bot pour lui permettre de changer d'etat'
      SwitchState(BotState newState)
+     
+     Permet de faire tourner un bot sur lui meme, arrete le déplacement, false = rotation vers la gauche, true = rotation vers la droite
+     bot.Rotate(bool direction)
          
      Permet de dire au bot de se rendre sur une position appartenant à l'équipe ( ici la ou se trouve le drapeau )
      bot.agent.SetDestination(botTeam.Places.GetPlacePosition(KeyPlaces.FLAG));
@@ -71,6 +77,8 @@ On BotBehaviour
     
     Fonction appelée sur le bot quand il meurt
     public override void OnDeath() {}
+    
+    
              
              
 On TeamBehaviour
