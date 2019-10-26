@@ -29,8 +29,9 @@ public class Bot : MonoBehaviour
   public Collider botCollider;
   public Renderer botRenderer;
   
-  public int health;
-  
+  private int health;
+  public int Health => this.health;
+
   public List<GameObject> visibleEnemyBots = new List<GameObject>();
   public List<GameObject> visibleAlliedBots = new List<GameObject>();
   public List<GameObject> visibleRockets = new List<GameObject>();

@@ -20,4 +20,25 @@ public class TeamBehaviourTemplate : TeamBehaviour
     public override void OnMatchStart() {
         
     }
+    
+    
+    // call back automatiquement appelé quand un drapeau est volé (volé à la base ou rammasé au sol par l'équipe adverse)
+    public override void OnFlagStolen(Team teamStolen)
+    {
+        
+    }
+    
+    // call back automatiquement appelé quand un drapeau est sauvé 
+    public override void OnFlagSaved(Team teamSaved)
+    {
+        
+    }
+
+    
+    // call back automatiquement appelé quand un point est marqué
+    public override void OnTeamScored(Team teamScored)
+    {
+        
+    }
+
 }

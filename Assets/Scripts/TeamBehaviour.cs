@@ -19,7 +19,21 @@ public abstract class TeamBehaviour : MonoBehaviour {
     public abstract void RegisterBot(Bot[] bots);
     
     public virtual void OnMatchStart() {
-        Debug.Log(this.teamId + " th match has started");
+        Debug.Log(this.teamId + " the match has started");
     }
-  
+
+    public virtual void OnFlagStolen(Team teamStolen)
+    {
+        Debug.Log("the team " + teamStolen.EnemyTeamId + " steals the team " + teamStolen.Id + " flag !");
+    }
+    
+    public virtual void OnFlagSaved(Team teamSaved)
+    {
+        Debug.Log("the team " + teamSaved.Id + " saves its flag !");
+    }
+    
+    public virtual void OnTeamScored(Team teamScored)
+    {
+        Debug.Log("the team " + teamScored.Id + " scores a point !");
+    }
 }

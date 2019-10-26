@@ -266,7 +266,6 @@ string FindScriptContainingWords(string team_name, string script_role)
   public void ShootRocketInDirection(int botId, Vector3 direction)
   {
     var rocket = this.rockets.GetAvailableRocket();
-    Debug.Log(rocket.name);
     rocket.Launch(GetBotFromBotId(botId),direction.normalized);
   }
   
@@ -401,6 +400,10 @@ string FindScriptContainingWords(string team_name, string script_role)
   public void ScorePoint(int botId) {
     var team = GetBotTeamFromBotId(botId);
     var enemyTeam = GetEnemyTeamFromBotId(botId);
+    foreach (var t in this.teams)
+    {
+      t.Behaviour.OnTeamScored(GetBotTeamFromBotId(botId));
+    }
     if (team.flag.Stolen == false && enemyTeam.flag.Carrier == botId)
     {
       var roundMaster = FindObjectOfType<RoundMaster>();
@@ -421,10 +424,18 @@ string FindScriptContainingWords(string team_name, string script_role)
     var flag = GetEnemyTeamFromBotId(botId).flag;
     flag.transform.parent = bot.transform;
     flag.Steal(botId);
+    foreach (var team in this.teams)
+    {
+      team.Behaviour.OnFlagStolen(GetBotTeamFromBotId(botId));
+    }
   }
 
   public void SaveFlag(int botId) {
     GetBotTeamFromBotId(botId).flag.Spawn();
+    foreach (var team in this.teams)
+    {
+      team.Behaviour.OnFlagSaved(GetBotTeamFromBotId(botId));
+    }
   }
   
   public void ShootRocket() {

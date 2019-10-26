@@ -12,6 +12,7 @@ public class Team : MonoBehaviour {
   public BattleGroundKeyPlaces Places => this.places;
 
   private TeamBehaviour behaviour;
+  public TeamBehaviour Behaviour => this.behaviour;
 
   public Flag flag;
   
