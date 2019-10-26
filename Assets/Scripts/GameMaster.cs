@@ -81,6 +81,10 @@ public class GameMaster : MonoBehaviour
   public float TimeSinceStart => this.master.TimeSinceStart;
   public int RoundTurn => this.master.TurnNumber;
 
+  
+  public float FlagSpawnTime => this.gameSettings.FlagSpawnTimer;
+  public float RocketRadius => this.rocketSettings.RocketBlastRadius;
+  public float RocketDamage => this.rocketSettings.RocketDamage;
   public int GetTeamRoundScore(int teamId)
   {
     return this.master.GetScore(teamId);

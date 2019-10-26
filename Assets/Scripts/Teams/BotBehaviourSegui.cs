@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Security.Cryptography;
+using UnityEngine.TestTools;
 
 
 public class BotBehaviourSegui : BotBehaviour 
@@ -26,6 +27,8 @@ public class BotBehaviourSegui : BotBehaviour
     
     void Update()
     {
+        
+        this.bot.RotateTowardsPoint(this.botTeam.flag.transform.position);
         if(!bot.agent.pathPending)
         {
             UpdateState();
@@ -35,12 +38,18 @@ public class BotBehaviourSegui : BotBehaviour
   
     // fonction appelée pour changer d'état
     public void SwitchState(BotState newState) {
+        
+       
+        
         this.OnExitState();
         this.state = newState;
         this.OnEnterState();
     }
 
     protected void OnEnterState() {
+        
+        Debug.Log("time since start : " +master.TimeSinceStart);
+        
         switch(state)
         {
             case BotState.RUN_TO_RANDOM_ALLIED_POSITION:
@@ -217,4 +226,5 @@ public class BotBehaviourSegui : BotBehaviour
         this.OnEnterState();
     }
 
+    
 }

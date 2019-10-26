@@ -171,17 +171,25 @@ public class Bot : MonoBehaviour
     RotateTowardsDirection(towardsPoint);
   }
 
+
+  private Vector3 currentRotation;
   // tourne vers la direction (world) passée en paramètre
   // la direction donnée doit être un vecteur sur le plan X-Z
   public void RotateTowardsDirection(Vector3 dir)
   {
-    //orientation = Vector3.RotateTowards(orientation, dir, agent.angularSpeed * Time.deltaTime, 1);
+    this.currentRotation = transform.rotation.eulerAngles;
+    this.agent.isStopped = true;
+    this.transform.rotation = Quaternion.LookRotation(Vector3.RotateTowards(currentRotation, dir, 360/ this.settings.SpeedRotation * Time.deltaTime, 1));
   }
 
-  public void Rotate(float rotationStep)
+  //0 to left, 1 to right
+  public void Rotate(bool direction)
   {
+    this.agent.isStopped = true;
+    float factor = direction ? 1 : -1;
+    this.transform.Rotate(Vector3.up, 360/this.settings.SpeedRotation * Time.deltaTime * factor);
     // first make sure rotation step is regular
-    rotationStep = Mathf.Min(rotationStep, agent.angularSpeed * Time.deltaTime);
+   // rotationStep = Mathf.Min(rotationStep, agent.angularSpeed * Time.deltaTime);
    // orientation =  Quaternion.AngleAxis(rotationStep, Vector3.up) * orientation;
   }
 

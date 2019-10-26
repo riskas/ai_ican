@@ -9,10 +9,12 @@ public class BotSettings : ScriptableObject
     public int Health => this.health;
     [SerializeField]
     private float playerVisionAngle = 75;
-
     public float PlayerVisionAngle => this.playerVisionAngle;
     [SerializeField]
     private float playerShootCooldown = 10;
 
+    private float speedRotation = 3;
+    public float SpeedRotation => this.speedRotation;
+    
     public float PlayerShootCooldown => this.playerShootCooldown;
 }
