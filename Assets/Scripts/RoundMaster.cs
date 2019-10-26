@@ -26,7 +26,18 @@ public class RoundMaster : MonoBehaviour
     private bool finished = false;
 
     private MatchMaster master;
+    public int TurnNumber => this.master.Turn;
 
+    public int GetScore(int team)
+    {
+        return this.data.scores[team];
+    }
+
+    public int GetMatchScore(int teamId)
+    {
+        return this.master.GetScrore(teamId);
+    }
+    
     public void Init(string teamAName, string teamBName, MatchMaster master)
     {
         this.master = master;

@@ -23,8 +23,14 @@ public class MatchMaster : MonoBehaviour
     [SerializeField] private TextMeshProUGUI blueTeamName;
     
     private MatchData data;
+    public int Turn => this.data.rounds;
     private bool finished;
 
+    public int GetScrore(int team)
+    {
+        return this.data.Scores[team];
+    }
+    
     public void Init(Tuple<int,string> teamA, Tuple<int,string> teamB)
     {
         this.data = new MatchData();

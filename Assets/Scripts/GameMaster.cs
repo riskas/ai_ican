@@ -79,7 +79,16 @@ public class GameMaster : MonoBehaviour
   private RoundMaster master;
   public float TimeLeft => this.master.TimeLeft;
   public float TimeSinceStart => this.master.TimeSinceStart;
-  
+  public int RoundTurn => this.master.TurnNumber;
+
+  public int GetTeamRoundScore(int teamId)
+  {
+    return this.master.GetScore(teamId);
+  }
+  public int GetTeamMatchScore(int teamId)
+  {
+    return this.master.GetMatchScore(teamId);
+  }
 
   //Create bots
   public bool Init(string[] teamNames, RoundMaster round)

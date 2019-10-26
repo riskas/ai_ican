@@ -36,6 +36,8 @@ public class Team : MonoBehaviour {
   // layer utilisée pour les drapeaux de cette équippe
   public int layer;
 
+  public int RoundScore => this.master.GetTeamRoundScore(this.id);
+  public int MatchScore => this.master.GetTeamMatchScore(this.id);
 
   public void Init(GameMaster master, int id)
   {
