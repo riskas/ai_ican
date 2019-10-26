@@ -55,12 +55,11 @@ public class MatchMaster : MonoBehaviour
     
     public void InitRound(){
         this.data.rounds ++;
-        this.roundMaster.Init(this.data.teamAName,this.data.teamBName);
+        this.roundMaster.Init(this.data.teamAName,this.data.teamBName, this);
     }
 
     public void EndRound()
     {
-        //collect data
         if (this.data.rounds >= this.settings.Rounds)
         {
             finished = true;

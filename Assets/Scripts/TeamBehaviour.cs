@@ -36,4 +36,9 @@ public abstract class TeamBehaviour : MonoBehaviour {
     {
         Debug.Log("the team " + teamScored.Id + " scores a point !");
     }
+
+    public void OnFlagDropped(Team teamFlagDropped)
+    {
+        Debug.Log("the flag of team " + teamFlagDropped.Id + " is dropped !");
+    }
 }

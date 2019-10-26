@@ -32,6 +32,8 @@ public class Bot : MonoBehaviour
   private int health;
   public int Health => this.health;
 
+  public bool hasFlag = false;
+
   public List<GameObject> visibleEnemyBots = new List<GameObject>();
   public List<GameObject> visibleAlliedBots = new List<GameObject>();
   public List<GameObject> visibleRockets = new List<GameObject>();
@@ -50,6 +52,7 @@ public class Bot : MonoBehaviour
     this.master = gameMaster;
     this.health = this.settings.Health;
     this.id = id;
+    this.hasFlag = false;
   }
 
   public void Spawn(Vector3 pos)
@@ -193,7 +196,11 @@ public class Bot : MonoBehaviour
   {
     this.health -= damage;
     this.behaviour.TakeDamage();
-    if(this.health < 0) this.master.OnBotDestroyed(this.id);
+    if (this.health < 0)
+    {
+      this.behaviour.OnDeath();
+      this.master.OnBotDestroyed(this.id);
+    }
   }
 
   public void RegisterBehaviour(Action<GameMaster, Bot> registerAction, BotBehaviour behaviour) {

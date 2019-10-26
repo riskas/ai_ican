@@ -24,9 +24,12 @@ public class RoundMaster : MonoBehaviour
     private string[] teamsName;
 
     private bool finished = false;
-    
-    public void Init(string teamAName,string teamBName)
+
+    private MatchMaster master;
+
+    public void Init(string teamAName, string teamBName, MatchMaster master)
     {
+        this.master = master;
         this.teamsName = new[] {teamAName, teamBName};
         this.data.winner = -1;
         this.data.scores = new[] {0, 0};

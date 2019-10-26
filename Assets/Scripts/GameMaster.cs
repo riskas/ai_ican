@@ -400,6 +400,7 @@ string FindScriptContainingWords(string team_name, string script_role)
   public void ScorePoint(int botId) {
     var team = GetBotTeamFromBotId(botId);
     var enemyTeam = GetEnemyTeamFromBotId(botId);
+    GetBotFromBotId(botId).hasFlag = false;
     foreach (var t in this.teams)
     {
       t.Behaviour.OnTeamScored(GetBotTeamFromBotId(botId));
@@ -416,6 +417,11 @@ string FindScriptContainingWords(string team_name, string script_role)
 
   public void DropFlag(int botId) {
     GetEnemyTeamFromBotId(botId).flag.Drop();
+    GetBotFromBotId(botId).hasFlag = false;
+    foreach (var t in this.teams)
+    {
+      t.Behaviour.OnFlagDropped(GetEnemyTeamFromBotId(botId));
+    }
   }
   
   public void StealFlag(int botId)
@@ -424,6 +430,7 @@ string FindScriptContainingWords(string team_name, string script_role)
     var flag = GetEnemyTeamFromBotId(botId).flag;
     flag.transform.parent = bot.transform;
     flag.Steal(botId);
+    bot.hasFlag = true;
     foreach (var team in this.teams)
     {
       team.Behaviour.OnFlagStolen(GetBotTeamFromBotId(botId));
