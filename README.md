@@ -54,22 +54,19 @@ On BotBehaviour
     
      Permet de tirer une roquete dans une direction ( vector3 )
      bot.ShootInDirection(direction); 
-     
-    
-    
+             
 On TeamBehaviour
      
     Fonction appelée sur chaque Team quand le match commence
-    public override void OnMatchStart() {        
-    }
+    public override void OnMatchStart() {}
+    
     Fonction appelée sur chaque Team quand un dreapeau est volé (volé à la base ou ramassé au sol)
-    public override void OnFlagStolen(Team teamStolen){     
-    }
+    public override void OnFlagStolen(Team teamStolen){ }
+    
     Fonction appelée sur chaque Team quand un drapeau est sauvé
-    public override void OnFlagSaved(Team teamStolen){       
-    }
+    public override void OnFlagSaved(Team teamStolen){ }
+    
     Fonction appelée sur chaque Team quand une équipe marque un point
-    public override void OnTeamScored(Team teamStolen){     
-    }
+    public override void OnTeamScored(Team teamStolen){ }
      
      
