@@ -471,8 +471,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: ad2126bf324df0d43b8bd7c03d3cdbb4, type: 2}
   roundMaster: {fileID: 1886845640}
-  redTeamName: {fileID: 570184395}
-  blueTeamName: {fileID: 1073648854}
+  redTeamName: {fileID: 1073648854}
+  blueTeamName: {fileID: 832567416}
 --- !u!4 &235707003
 Transform:
   m_ObjectHideFlags: 0
@@ -532,18 +532,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &570184395 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1369523738299117418, guid: 0724e53521f7fc44a8c390742714146f,
-    type: 3}
-  m_PrefabInstance: {fileID: 7886509791294721074}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &832567416 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7886509791002817610, guid: 0724e53521f7fc44a8c390742714146f,
@@ -821,8 +809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settings: {fileID: 11400000, guid: e73caec45ce5ec342829902f81cbcb2a, type: 2}
   gameMaster: {fileID: 1084165407}
-  teamAScore: {fileID: 832567416}
-  teamBScore: {fileID: 200288587}
+  teamAScore: {fileID: 200288587}
+  teamBScore: {fileID: 832567416}
   timeLeft: {fileID: 1947765864}
 --- !u!4 &1886845641
 Transform:

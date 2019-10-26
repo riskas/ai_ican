@@ -156,4 +156,12 @@ public class Team : MonoBehaviour {
   {
     this.places = teamPlaces;
   }
+
+  public TeamSide TeamSide => this.id == 0 ? TeamSide.Red : TeamSide.Blue;
+
+}
+public enum TeamSide
+{
+  Red = 0,
+  Blue = 1
 }

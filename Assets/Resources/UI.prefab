@@ -780,7 +780,7 @@ GameObject:
   - component: {fileID: 884506268284622491}
   - component: {fileID: 4892466471708883134}
   m_Layer: 5
-  m_Name: BlueTeamName
+  m_Name: RedTeamName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -840,8 +840,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294949120
-  m_fontColor: {r: 0, g: 0.7254902, b: 1, a: 1}
+    rgba: 4279110363
+  m_fontColor: {r: 0.8588236, g: 0.039215688, b: 0.054901965, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1277,7 +1277,7 @@ GameObject:
   - component: {fileID: 2242424340374215260}
   - component: {fileID: 1369523738299117418}
   m_Layer: 5
-  m_Name: RedTeamName
+  m_Name: BlueTeamName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,8 +1337,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4292057097
+  m_fontColor: {r: 0.03529412, g: 0.59607846, b: 0.82745105, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1498,7 +1498,7 @@ GameObject:
   - component: {fileID: 7886509791002817611}
   - component: {fileID: 7886509791002817610}
   m_Layer: 5
-  m_Name: RedTeamScore
+  m_Name: BlueTeamScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1558,8 +1558,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4292057097
+  m_fontColor: {r: 0.03529412, g: 0.59607846, b: 0.82745105, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1756,7 +1756,7 @@ GameObject:
   - component: {fileID: 7886509791369176446}
   - component: {fileID: 7886509791369176441}
   m_Layer: 5
-  m_Name: BlueTeamScore
+  m_Name: RedTeamScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1816,8 +1816,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294949120
-  m_fontColor: {r: 0, g: 0.7254902, b: 1, a: 1}
+    rgba: 4279110363
+  m_fontColor: {r: 0.8588236, g: 0.039215688, b: 0.054901965, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

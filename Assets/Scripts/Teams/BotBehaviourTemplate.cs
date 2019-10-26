@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class BotBehaviourTemplate : BotBehaviour
 {
+
+    public static int valueIncremental = 0;
+    public int myValue = 0;
+    
     public enum BotState{ 
         IDLE,
     };

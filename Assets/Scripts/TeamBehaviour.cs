@@ -41,4 +41,7 @@ public abstract class TeamBehaviour : MonoBehaviour {
     {
         Debug.Log("the flag of team " + teamFlagDropped.Id + " is dropped !");
     }
+
+   
 }
+
