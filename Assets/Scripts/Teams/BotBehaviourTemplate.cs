@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BotBehaviourTemplate : BotBehaviour
 {
-    
+    private Team[] teams = new Team[2];
     /// bot = permet de récuperer le component Bot
 
     /// master = permet d'acceder au GameMaster de la partie pour utiliser des fonctions outils
