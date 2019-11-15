@@ -59,6 +59,7 @@ public class Bot : MonoBehaviour
   {
     this.health = this.settings.Health;
     this.is_dead = false;
+    this.can_shoot = true;
     this.transform.position = pos;
     this.gameObject.SetActive(true);
     this.behaviour.OnRespawn();
